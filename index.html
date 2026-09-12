@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thomas Routhu — Machine Learning &amp; Edge AI Research</title>
-  <meta name="description" content="Thomas Routhu, PhD candidate in Computer Science working on deep learning for sensor-based infrastructure monitoring and edge AI.">
+  <title>Thomas Routhu — Data Scientist, ML &amp; AI Engineer</title>
+  <meta name="description" content="Thomas Routhu — PhD candidate and Data Scientist / ML Engineer / AI Engineer with a background in deep learning, time-series analysis, and production data pipelines.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,6 +29,7 @@
       </button>
       <div class="nav__right">
         <ul class="nav__list" id="navList">
+          <li><a href="#focus">Focus</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -59,7 +60,12 @@
       <div class="hero__content">
         <p class="hero__kicker">PhD Candidate, Computer Science</p>
         <h1 class="hero__title">Thomas Routhu</h1>
-        <p class="hero__lede">I build machine learning systems that turn raw sensor signal into decisions — anomaly detection, predictive maintenance, and edge AI for infrastructure that has to keep working.</p>
+        <div class="hero__roles">
+          <span class="role-pill">Data Scientist</span>
+          <span class="role-pill">ML Engineer</span>
+          <span class="role-pill">AI Engineer</span>
+        </div>
+        <p class="hero__lede">I turn messy, real-world data into models and systems that work in production — from statistical analysis and feature engineering to deep learning pipelines deployed on live infrastructure. My research applies this to large-scale sensor networks; the same skills carry directly into data science and ML/AI engineering roles.</p>
         <div class="hero__actions">
           <a href="resume.pdf" class="btn btn--primary" download>Download résumé</a>
           <a href="#contact" class="btn btn--ghost">Get in touch</a>
@@ -71,13 +77,43 @@
       </div>
     </section>
 
+    <!-- ===== FOCUS AREAS ===== -->
+    <section class="section section--alt" id="focus">
+      <div class="section__inner section__inner--wide">
+        <h2 class="section__heading">What I do</h2>
+        <div class="focus-grid">
+          <div class="focus-card">
+            <h3 class="focus-card__title">Data Science</h3>
+            <p class="focus-card__desc">Exploratory analysis, feature engineering, and statistical modeling on large multivariate time-series datasets — turning raw sensor and industrial data into KPIs and decisions stakeholders can act on.</p>
+            <ul class="chips chips--small">
+              <li>Time-series analysis</li><li>Statistical analysis</li><li>Pandas / NumPy</li><li>Tableau / Power BI</li>
+            </ul>
+          </div>
+          <div class="focus-card">
+            <h3 class="focus-card__title">ML Engineering</h3>
+            <p class="focus-card__desc">Designing the data pipelines, preprocessing, and annotation workflows that get models into production reliably — with the data quality checks and monitoring to keep them trustworthy over time.</p>
+            <ul class="chips chips--small">
+              <li>Data pipeline design</li><li>ETL</li><li>Docker</li><li>Git</li><li>Data quality assurance</li>
+            </ul>
+          </div>
+          <div class="focus-card">
+            <h3 class="focus-card__title">AI Engineering</h3>
+            <p class="focus-card__desc">Building deep learning and neural network models for anomaly detection and predictive maintenance, applied to real-time infrastructure monitoring at scale.</p>
+            <ul class="chips chips--small">
+              <li>Deep learning</li><li>PyTorch / TensorFlow</li><li>Anomaly detection</li><li>Predictive modeling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== ABOUT ===== -->
     <section class="section" id="about">
       <div class="section__inner">
         <h2 class="section__heading">About</h2>
         <div class="about">
-          <p>I'm a PhD candidate in Computer Science at the Università di Pavia, currently a visiting researcher at the OWL University of Applied Sciences in Lemgo, Germany. My work sits between machine learning and civil infrastructure: I design data pipelines for vibration and inclinometer sensors on bridge structures, then build deep learning models that can flag the anomalies worth a human's attention.</p>
-          <p>Before this, I worked as an industrial PhD researcher with Milano Serravalle – Milano Tangenziali, programmed collaborative robots as a working student, and did materials-testing research in India. Across all of it, the throughline is the same: large, messy, real-world datasets, and the job of making them trustworthy and useful.</p>
+          <p>I'm a PhD candidate in Computer Science at the Università di Pavia, currently a visiting researcher at the OWL University of Applied Sciences in Lemgo, Germany. My research applies machine learning and deep learning to large-scale sensor networks — but the underlying skill set is general-purpose: building data pipelines, engineering features from messy multivariate data, training and validating models, and getting them running reliably outside a notebook.</p>
+          <p>Before this, I worked as an industrial PhD researcher with Milano Serravalle – Milano Tangenziali, programmed collaborative robots as a working student, and did materials-testing research in India. Across all of it, the throughline is the same: large, messy, real-world datasets, and the job of making them trustworthy, analyzable, and useful — whether that's framed as data science, ML engineering, or applied AI research.</p>
         </div>
         <dl class="factsheet">
           <div><dt>Based in</dt><dd>Pavia, Italy / Lemgo, Germany</dd></div>
@@ -226,7 +262,7 @@
           </a>
           <a class="contact__card" href="https://www.linkedin.com/in/thomas-routhu/" target="_blank" rel="noopener">
             <span class="contact__label">LinkedIn</span>
-            <span class="contact__value">linkedin.com/in/thomasrouthu</span>
+            <span class="contact__value">linkedin.com/in/thomas-routhu</span>
           </a>
         </div>
       </div>
@@ -239,8 +275,8 @@
   </footer>
 
   <!-- GoatCounter analytics — replace MYCODE with your actual site code -->
-  <script data-goatcounter="https://thomasrouthu.goatcounter.com/count"
-  async src="//gc.zgo.at/count.js"></script>
+  <script data-goatcounter="https://MYCODE.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
 
   <script src="assets/js/main.js"></script>
 </body>
