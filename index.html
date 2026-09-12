@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thomas Routhu — Machine Learning &amp; Edge AI Research</title>
+  <meta name="description" content="Thomas Routhu, PhD candidate in Computer Science working on deep learning for sensor-based infrastructure monitoring and edge AI.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#top" class="nav__name">Thomas Routhu</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__list" id="navList">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <svg class="hero__trace" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+        <path class="hero__trace-path" d="M0,150 L60,150 L90,60 L120,190 L150,110 L180,140 L210,40 L240,170 L270,150 L330,150 L360,90 L390,180 L420,120 L450,150 L480,70 L510,160 L540,150 L600,150 L630,100 L660,175 L690,130 L720,150 L750,55 L780,165 L810,150 L870,150 L900,95 L930,185 L960,115 L990,150 L1020,65 L1050,155 L1080,150 L1200,150" fill="none"/>
+      </svg>
+
+      <div class="hero__content">
+        <p class="hero__kicker">PhD Candidate, Computer Science</p>
+        <h1 class="hero__title">Thomas Routhu</h1>
+        <p class="hero__lede">I build machine learning systems that turn raw sensor signal into decisions — anomaly detection, predictive maintenance, and edge AI for infrastructure that has to keep working.</p>
+        <div class="hero__actions">
+          <a href="resume.pdf" class="btn btn--primary" download>Download résumé</a>
+          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero__portrait">
+        <img src="assets/img/profile.jpg" alt="Portrait of Thomas Routhu" onerror="this.parentElement.classList.add('hero__portrait--empty')">
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+      <div class="section__inner">
+        <h2 class="section__heading">About</h2>
+        <div class="about">
+          <p>I'm a PhD candidate in Computer Science at the Università di Pavia, currently a visiting researcher at the OWL University of Applied Sciences in Lemgo, Germany. My work sits between machine learning and civil infrastructure: I design data pipelines for vibration and inclinometer sensors on bridge structures, then build deep learning models that can flag the anomalies worth a human's attention.</p>
+          <p>Before this, I worked as an industrial PhD researcher with Milano Serravalle – Milano Tangenziali, programmed collaborative robots as a working student, and did materials-testing research in India. Across all of it, the throughline is the same: large, messy, real-world datasets, and the job of making them trustworthy and useful.</p>
+        </div>
+        <dl class="factsheet">
+          <div><dt>Based in</dt><dd>Pavia, Italy / Lemgo, Germany</dd></div>
+          <div><dt>Focus</dt><dd>Deep learning, time-series &amp; sensor data, edge AI</dd></div>
+          <div><dt>Currently</dt><dd>Visiting PhD Student, OWL University of Applied Sciences</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="section section--alt" id="experience">
+      <div class="section__inner">
+        <h2 class="section__heading">Experience</h2>
+
+        <ol class="timeline">
+          <li class="timeline__item">
+            <span class="timeline__date">2024 — Present</span>
+            <h3 class="timeline__role">Visiting PhD Student</h3>
+            <p class="timeline__org">OWL University of Applied Sciences, Institute Industrial IT · Lemgo, Germany</p>
+            <p class="timeline__desc">Run end-to-end data workflows for vibration and inclinometer measurements from 100+ sensors across multiple bridge spans, apply deep learning to multivariate time-series for anomaly detection, and set the KPIs used to evaluate that detection performance.</p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__date">2023 — Present</span>
+            <h3 class="timeline__role">Industrial PhD — Computer Science / Machine Learning</h3>
+            <p class="timeline__org">Milano Serravalle – Milano Tangenziali S.p.A. · Milan, Italy</p>
+            <p class="timeline__desc">Build data collection, preprocessing, and annotation workflows for sensor-based infrastructure monitoring, and develop the reporting frameworks used to track model and workflow performance.</p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__date">Nov 2023 — Jan 2024</span>
+            <h3 class="timeline__role">Samsung Innovation Campus</h3>
+            <p class="timeline__org">Samsung Italia · Pavia, Italy</p>
+            <p class="timeline__desc">Advanced industry training in AI, IoT, and digital transformation.</p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__date">2022 — 2023</span>
+            <h3 class="timeline__role">Robotics Programmer — Working Student</h3>
+            <p class="timeline__org">ReHouseit – Società Benefit · Milan, Italy</p>
+            <p class="timeline__desc">Designed automated workflows for collaborative robot operations and built CAM-translation and real-time simulation tools that improved operational efficiency by 30%.</p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__date">2020</span>
+            <h3 class="timeline__role">Research Associate</h3>
+            <p class="timeline__org">BML Munjal University · Gurgaon, India</p>
+            <p class="timeline__desc">Researched tool-coating optimization, improving tool-life performance by 25%, and contributed to a peer-reviewed journal publication.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section" id="skills">
+      <div class="section__inner">
+        <h2 class="section__heading">Skills</h2>
+
+        <div class="skillgroup">
+          <h3 class="skillgroup__title">Programming</h3>
+          <ul class="chips">
+            <li>Python</li><li>SQL</li><li>MATLAB</li>
+          </ul>
+        </div>
+        <div class="skillgroup">
+          <h3 class="skillgroup__title">Machine learning &amp; AI</h3>
+          <ul class="chips">
+            <li>Deep learning</li><li>Artificial neural networks</li><li>Anomaly detection</li><li>Predictive modeling</li><li>Scikit-learn</li><li>TensorFlow</li><li>PyTorch</li>
+          </ul>
+        </div>
+        <div class="skillgroup">
+          <h3 class="skillgroup__title">Data science &amp; analysis</h3>
+          <ul class="chips">
+            <li>Time-series analysis</li><li>Sensor data analysis</li><li>Feature engineering</li><li>Statistical analysis</li><li>NumPy</li><li>Pandas</li><li>Matplotlib</li><li>Seaborn</li>
+          </ul>
+        </div>
+        <div class="skillgroup">
+          <h3 class="skillgroup__title">Data engineering &amp; operations</h3>
+          <ul class="chips">
+            <li>Data pipeline design</li><li>ETL</li><li>Data quality assurance</li><li>Data annotation</li><li>KPI development</li>
+          </ul>
+        </div>
+        <div class="skillgroup">
+          <h3 class="skillgroup__title">Tools</h3>
+          <ul class="chips">
+            <li>Git</li><li>Docker</li><li>Linux</li><li>OpenCV</li><li>Tableau</li><li>Power BI</li><li>ANSYS</li><li>SolidWorks</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PUBLICATIONS ===== -->
+    <section class="section section--alt" id="publications">
+      <div class="section__inner">
+        <h2 class="section__heading">Selected publications</h2>
+        <ul class="pubs">
+          <li class="pubs__item">
+            <p class="pubs__title">Modular Digital Twin for Air Handling Units</p>
+            <p class="pubs__note">Research on data-driven digital twin systems.</p>
+          </li>
+          <li class="pubs__item">
+            <p class="pubs__title">Efficient Storage by Filtering of Large Sensor Data for Infrastructure Monitoring</p>
+            <p class="pubs__note">Data optimization for large-scale sensor datasets.</p>
+          </li>
+          <li class="pubs__item">
+            <p class="pubs__title">Applying AI in the Area of Automation Systems: Overview and Challenges</p>
+            <p class="pubs__note">AI/ML applications in automation systems.</p>
+          </li>
+          <li class="pubs__item">
+            <p class="pubs__title">Probabilistic Framework for Multi-Vehicle Tracking Using Distributed Accelerometer Sensors</p>
+            <p class="pubs__note">AI/ML applications in automation systems.</p>
+          </li>
+        </ul>
+
+        <h2 class="section__heading section__heading--tight">Education</h2>
+        <ul class="edu">
+          <li>
+            <p class="edu__degree">PhD in Computer Science — Data Science &amp; Machine Learning Focus</p>
+            <p class="edu__meta">Università di Pavia · Pavia, Italy · 2023 – 2026</p>
+          </li>
+          <li>
+            <p class="edu__degree">Master's Degree in Robotics and Mechatronics — Industrial Automation</p>
+            <p class="edu__meta">Università di Pavia · Pavia, Italy · 2020 – 2023</p>
+          </li>
+          <li>
+            <p class="edu__degree">Master of Science in Informatics</p>
+            <p class="edu__meta">Gdańsk University of Technology · Gdańsk, Poland · 2022</p>
+          </li>
+          <li>
+            <p class="edu__degree">Bachelor of Technology in Mechanical Engineering</p>
+            <p class="edu__meta">BML Munjal University · Gurgaon, India · 2016 – 2020</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section" id="contact">
+      <div class="section__inner">
+        <h2 class="section__heading">Get in touch</h2>
+        <p class="contact__lede">Open to research collaborations, industrial ML/AI roles, and conversations about infrastructure monitoring.</p>
+        <div class="contact__grid">
+          <a class="contact__card" href="mailto:thomas.routhu@gmail.com">
+            <span class="contact__label">Email</span>
+            <span class="contact__value">thomas.routhu@gmail.com</span>
+          </a>
+          <a class="contact__card" href="tel:+393516831317">
+            <span class="contact__label">Phone</span>
+            <span class="contact__value">+39 351 683 1317</span>
+          </a>
+          <a class="contact__card" href="https://linkedin.com/in/thomasrouthu" target="_blank" rel="noopener">
+            <span class="contact__label">LinkedIn</span>
+            <span class="contact__value">linkedin.com/in/thomasrouthu</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Thomas Routhu</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
