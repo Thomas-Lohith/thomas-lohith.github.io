@@ -3,8 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thomas Routhu — Data Scientist, ML &amp; AI Engineer</title>
-  <meta name="description" content="Thomas Routhu — PhD candidate and Data Scientist / ML Engineer / AI Engineer with a background in deep learning, time-series analysis, and production data pipelines.">
+  <title>Thomas Routhu — Data Scientist, ML &amp; AI Engineer · Time-Series &amp; Anomaly Detection</title>
+  <meta name="description" content="Thomas Routhu — PhD candidate (Università di Pavia) and Data Scientist / ML Engineer / AI Engineer specialising in time-series anomaly detection for industrial and infrastructure sensor networks. 3 IEEE ETFA papers.">
+
+  <!-- Social previews (LinkedIn / Slack / WhatsApp) -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Thomas Routhu — Data Scientist, ML &amp; AI Engineer">
+  <meta property="og:description" content="Time-series anomaly detection for industrial and infrastructure sensor networks. Industrial PhD with Milano Serravalle – Milano Tangenziali.">
+  <meta property="og:url" content="https://thomas-lohith.github.io/">
+  <meta property="og:image" content="https://thomas-lohith.github.io/assets/img/photo.png">
+  <link rel="canonical" href="https://thomas-lohith.github.io/">
+
+  <!-- Structured data: helps search engines connect your profiles -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Thomas Routhu",
+    "jobTitle": "PhD Candidate — Data Scientist / ML Engineer",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Università di Pavia" },
+    "url": "https://thomas-lohith.github.io/",
+    "email": "mailto:thomas.routhu@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/thomas-routhu/",
+      "https://github.com/Thomas-Lohith",
+      "https://scholar.google.com/citations?user=yZH5A8kAAAAJ",
+      "https://orcid.org/0009-0009-2563-5831"
+    ]
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +40,8 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <script>
     (function () {
-      var saved = localStorage.getItem('theme');
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
       var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
       document.documentElement.setAttribute('data-theme', saved || (prefersLight ? 'light' : 'dark'));
     })();
@@ -30,10 +58,11 @@
       <div class="nav__right">
         <ul class="nav__list" id="navList">
           <li><a href="#focus">Focus</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#publications">Publications</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <button class="theme-toggle" id="themeToggle" aria-label="Switch to light theme" title="Toggle light/dark theme">
@@ -58,18 +87,33 @@
       </svg>
 
       <div class="hero__content">
-        <p class="hero__kicker">PhD Candidate, Computer Science</p>
+        <p class="hero__kicker">PhD Candidate, Computer Science · Università di Pavia</p>
         <h1 class="hero__title">Thomas Routhu</h1>
         <div class="hero__roles">
           <span class="role-pill">Data Scientist</span>
           <span class="role-pill">ML Engineer</span>
           <span class="role-pill">AI Engineer</span>
         </div>
-        <p class="hero__lede">I turn messy, real-world data into models and systems that work in production, from statistical analysis and feature engineering to deep learning pipelines deployed on live infrastructure. My research applies this to large-scale sensor networks; the same skills carry directly into data science and ML/AI engineering roles.</p>
+        <p class="hero__niche">Time-series &amp; anomaly detection for industrial and infrastructure sensor networks</p>
+        <p class="hero__lede">I turn messy, high-frequency sensor data into pipelines, models and KPIs that engineers can act on. In my industrial PhD with a highway operator, that means 100+ accelerometers and inclinometers on live bridges, from raw 100&nbsp;Hz signals to anomaly flags and reports.</p>
+
+        <ul class="hero__stats" aria-label="Key facts">
+          <li><span class="stat__num">100+</span><span class="stat__label">bridge sensors in my pipelines</span></li>
+          <li><span class="stat__num">100&nbsp;Hz</span><span class="stat__label">triaxial vibration data</span></li>
+          <li><span class="stat__num">3</span><span class="stat__label">IEEE ETFA papers (2024–25)</span></li>
+        </ul>
+
         <div class="hero__actions">
           <a href="resume.pdf" class="btn btn--primary" download>Download résumé</a>
-          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+          <a href="#projects" class="btn btn--ghost">See case study</a>
         </div>
+        <p class="hero__links">
+          <a href="https://github.com/Thomas-Lohith" target="_blank" rel="noopener">GitHub</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://scholar.google.com/citations?user=yZH5A8kAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://www.linkedin.com/in/thomas-routhu/" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
       </div>
 
       <div class="hero__portrait">
@@ -84,42 +128,141 @@
         <div class="focus-grid">
           <div class="focus-card">
             <h3 class="focus-card__title">Data Science</h3>
-            <p class="focus-card__desc">Exploratory analysis, feature engineering, and statistical modeling on large multivariate time-series datasets — turning raw sensor and industrial data into KPIs and decisions stakeholders can act on.</p>
+            <p class="focus-card__desc">Exploratory analysis, signal processing and statistical modelling on large multivariate time series. I relate structural response to real traffic and load data, and turn the results into KPIs that stakeholders can act on.</p>
             <ul class="chips chips--small">
-              <li>Time-series analysis</li><li>Statistical analysis</li><li>Pandas / NumPy</li><li>Tableau / Power BI</li>
+              <li>Time-series analysis</li><li>FFT / Welch PSD</li><li>Statistical analysis</li><li>Pandas / Polars</li>
             </ul>
           </div>
           <div class="focus-card">
             <h3 class="focus-card__title">ML Engineering</h3>
-            <p class="focus-card__desc">Designing the data pipelines, preprocessing, and annotation workflows that get models into production reliably — with the data quality checks and monitoring to keep them trustworthy over time.</p>
+            <p class="focus-card__desc">Data pipelines, preprocessing and annotation workflows for high-volume sensor streams. They include storage-efficient formats, event filtering and data-quality checks so the data stays usable for months, not days.</p>
             <ul class="chips chips--small">
-              <li>Data pipeline design</li><li>ETL</li><li>Docker</li><li>Git</li><li>Data quality assurance</li>
+              <li>Data pipeline design</li><li>Parquet / ETL</li><li>Docker</li><li>Git</li><li>Data quality</li>
             </ul>
           </div>
           <div class="focus-card">
             <h3 class="focus-card__title">AI Engineering</h3>
-            <p class="focus-card__desc">Building deep learning and neural network models for anomaly detection and predictive maintenance, applied to real-time infrastructure monitoring at scale.</p>
+            <p class="focus-card__desc">Deep learning and probabilistic models for anomaly detection and predictive maintenance on infrastructure and industrial assets, built so a domain engineer can review and trust every flagged anomaly.</p>
             <ul class="chips chips--small">
-              <li>Deep learning</li><li>PyTorch / TensorFlow</li><li>Anomaly detection</li><li>Predictive modeling</li>
+              <li>Deep learning</li><li>PyTorch / TensorFlow</li><li>Anomaly detection</li><li>Probabilistic ML</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== ABOUT ===== -->
-    <section class="section" id="about">
-      <div class="section__inner">
-        <h2 class="section__heading">About</h2>
-        <div class="about">
-          <p>I am a PhD candidate in Computer Science at the Università di Pavia, conducting industrial doctoral research in collaboration with Milano Serravalle – Milano Tangenziali. My work applies machine learning and deep learning to large-scale sensor networks, drawing on a broadly transferable skill set: building data pipelines, engineering features from complex multivariate data, training and validating models, and deploying them so they run reliably beyond the notebook environment.</p>
-          <p>Previously, I was a visiting researcher at OWL University of Applied Sciences in Lemgo, Germany, a working student programming collaborative robots, and a materials-testing researcher in India. Across these roles, the common thread has been working with large, real-world datasets and making them trustworthy, analyzable, and useful, whether the work is described as data science, ML engineering, or applied AI research.</p>
+    <!-- ===== PROJECTS / CASE STUDY ===== -->
+    <section class="section" id="projects">
+      <div class="section__inner section__inner--wide">
+        <h2 class="section__heading">Projects</h2>
+
+        <article class="case">
+          <header class="case__head">
+            <p class="case__eyebrow">Featured case study · Industrial PhD, 2023 – present</p>
+            <h3 class="case__title">Bridge health monitoring: from raw vibration to reviewed anomaly flags</h3>
+            <p class="case__org">Milano Serravalle – Milano Tangenziali · Università di Pavia · OWL University of Applied Sciences (inIT)</p>
+          </header>
+
+          <div class="case__grid">
+            <div class="case__block">
+              <h4>The problem</h4>
+              <p>A highway operator instruments its bridges with 100+ triaxial accelerometers and inclinometers sampling at 100&nbsp;Hz. At full rate that is up to <strong>~2.7 billion readings a day</strong> (106 sensors × 3 axes × 100&nbsp;Hz × 86,400&nbsp;s). Most of it is ordinary traffic and ambient vibration. Engineers need early, trustworthy signals of abnormal behaviour, not terabytes of raw signal.</p>
+            </div>
+            <div class="case__block">
+              <h4>My role</h4>
+              <p>I own the data path end to end: ingestion and storage, preprocessing and annotation, feature extraction, anomaly-detection models, and the KPIs and reports that the operator's engineers use to judge them.</p>
+            </div>
+          </div>
+
+          <!-- Pipeline diagram: HTML/CSS (not an image) so it is readable by ATS/search engines,
+               follows the light/dark theme, and stacks vertically on phones. -->
+          <figure class="pipeline" aria-labelledby="pipeline-caption">
+            <ol class="pipeline__flow">
+              <li class="pipeline__stage">
+                <span class="pipeline__num">01</span>
+                <h5>Sense</h5>
+                <p>100+ accelerometers &amp; inclinometers across multiple bridge spans, 100&nbsp;Hz, X/Y/Z</p>
+              </li>
+              <li class="pipeline__stage">
+                <span class="pipeline__num">02</span>
+                <h5>Ingest &amp; store</h5>
+                <p>CSV → Parquet; event-based filtering and downsampling to cut long-term storage</p>
+                <a class="pipeline__ev" href="https://ieeexplore.ieee.org/document/11205642" target="_blank" rel="noopener">ETFA 2025 paper ↗</a>
+              </li>
+              <li class="pipeline__stage">
+                <span class="pipeline__num">03</span>
+                <h5>Clean &amp; align</h5>
+                <p>DC-offset removal, sensor QA, time-alignment with traffic data</p>
+                <span class="pipeline__side">+ traffic counts (5 vehicle classes, 15-min) &amp; weigh-in-motion axle loads</span>
+              </li>
+              <li class="pipeline__stage">
+                <span class="pipeline__num">04</span>
+                <h5>Features</h5>
+                <p>FFT, Welch PSD, spectrograms, statistical thresholds, vehicle-induced events</p>
+                <a class="pipeline__ev" href="https://github.com/Thomas-Lohith/industry_time_series" target="_blank" rel="noopener">code ↗</a>
+              </li>
+              <li class="pipeline__stage">
+                <span class="pipeline__num">05</span>
+                <h5>Model</h5>
+                <p>Deep learning on multivariate time series + probabilistic ML for anomaly scores</p>
+                <a class="pipeline__ev" href="https://github.com/Thomas-Lohith/Probabilistic-Machine-Learning-approach" target="_blank" rel="noopener">code ↗</a>
+              </li>
+              <li class="pipeline__stage pipeline__stage--out">
+                <span class="pipeline__num">06</span>
+                <h5>Act</h5>
+                <p>KPIs, reports and flagged events for the operator's engineers</p>
+              </li>
+            </ol>
+            <p class="pipeline__loop"><span aria-hidden="true">↺</span> Events reviewed by engineers become annotated data for evaluating and retraining the models (stage 06 → 03).</p>
+            <figcaption id="pipeline-caption">End-to-end monitoring pipeline I build and maintain. The links point to the public code and paper behind each stage.</figcaption>
+          </figure>
+
+          <div class="case__grid">
+            <div class="case__block">
+              <h4>Approach</h4>
+              <ul class="case__list">
+                <li>Converted raw per-sensor CSV logs to columnar Parquet and processed them with Polars/Pandas so that multi-day, multi-sensor analysis fits on a workstation.</li>
+                <li>Designed event-based filtering and downsampling that keeps vehicle-induced and abnormal events at full resolution and stores quiet periods compactly (first-author paper, IEEE ETFA 2025).</li>
+                <li>Related vibration amplitude and spectral content to traffic volume, heavy-vehicle share and weigh-in-motion loads, separating normal load response from behaviour worth flagging.</li>
+                <li>Trained deep-learning and probabilistic models on multivariate time series and defined the KPIs used to evaluate detection performance.</li>
+              </ul>
+            </div>
+            <div class="case__block">
+              <h4>Outcome</h4>
+              <ul class="case__list">
+                <li>A reproducible pipeline from raw sensor files to anomaly flags and reports, used in an ongoing industrial collaboration.</li>
+                <li>Peer-reviewed publication on storage-efficient filtering of large sensor data (IEEE ETFA 2025).</li>
+                <li>Open-source analysis tooling (vibration, spectral and traffic analysis, threshold computation) under the MIT licence.</li>
+              </ul>
+              <p class="case__note">Detection metrics and site data are confidential to the infrastructure operator. I'm happy to walk through the methods and evaluation design in an interview.</p>
+            </div>
+          </div>
+
+          <ul class="chips chips--small case__stack" aria-label="Tech stack">
+            <li>Python</li><li>Polars</li><li>Pandas</li><li>NumPy</li><li>SciPy</li><li>PyTorch / TensorFlow</li><li>Parquet</li><li>Plotly</li><li>Matplotlib</li><li>Git</li>
+          </ul>
+        </article>
+
+        <div class="proj-grid">
+          <article class="proj-card">
+            <p class="proj-card__meta">Open source · Python · MIT</p>
+            <h3 class="proj-card__title">Probabilistic ML on bridge accelerometer data</h3>
+            <p class="proj-card__desc">A probabilistic machine-learning approach applied to triaxial accelerometer time series from instrumented bridges. It is packaged as an installable Python project with a <code>src/</code> layout, pinned requirements and saved results.</p>
+            <a class="proj-card__link" href="https://github.com/Thomas-Lohith/Probabilistic-Machine-Learning-approach" target="_blank" rel="noopener">View repository ↗</a>
+          </article>
+          <article class="proj-card">
+            <p class="proj-card__meta">Open source · Python · MIT</p>
+            <h3 class="proj-card__title">Bridge vibration &amp; traffic analysis toolkit</h3>
+            <p class="proj-card__desc">CLI scripts for multi-sensor vibration analysis, 2D/3D spectrograms, traffic-pattern and heavy-vehicle analysis, automatic threshold computation, event filtering and storage downsampling.</p>
+            <a class="proj-card__link" href="https://github.com/Thomas-Lohith/industry_time_series" target="_blank" rel="noopener">View repository ↗</a>
+          </article>
+          <article class="proj-card">
+            <p class="proj-card__meta">Research · IEEE ETFA 2024</p>
+            <h3 class="proj-card__title">Modular digital twin for air handling units</h3>
+            <p class="proj-card__desc">A modular simulation of HVAC air handling units that combines physical models of air conditions with IoT sensor data, aimed at monitoring and optimising building energy use.</p>
+            <a class="proj-card__link" href="https://ieeexplore.ieee.org/document/10710856" target="_blank" rel="noopener">Read paper ↗</a>
+          </article>
         </div>
-        <dl class="factsheet">
-          <div><dt>Based in</dt><dd>Pavia, Italy / Lemgo, Germany</dd></div>
-          <div><dt>Focus</dt><dd>Deep learning, time-series &amp; sensor data, edge AI</dd></div>
-          <div><dt>Currently</dt><dd>Visiting PhD Student, OWL University of Applied Sciences</dd></div>
-        </dl>
       </div>
     </section>
 
@@ -130,34 +273,43 @@
 
         <ol class="timeline">
           <li class="timeline__item">
-            <span class="timeline__date">2024 — Present</span>
-            <h3 class="timeline__role">Visiting PhD Student</h3>
-            <p class="timeline__org">OWL University of Applied Sciences, Institute Industrial IT · Lemgo, Germany</p>
-            <p class="timeline__desc">Run end-to-end data workflows for vibration and inclinometer measurements from 100+ sensors across multiple bridge spans, apply deep learning to multivariate time-series for anomaly detection, and set the KPIs used to evaluate that detection performance.</p>
+            <span class="timeline__date">Aug 2024 — Present</span>
+            <h3 class="timeline__role">Visiting PhD Researcher</h3>
+            <p class="timeline__org">OWL University of Applied Sciences, Institute Industrial IT (inIT) · Lemgo, Germany</p>
+            <ul class="timeline__list">
+              <li>Run end-to-end data workflows for vibration and inclinometer measurements from 100+ sensors across multiple bridge spans.</li>
+              <li>Apply deep learning to multivariate time series for anomaly detection, and define the KPIs used to evaluate detection performance.</li>
+            </ul>
           </li>
           <li class="timeline__item">
-            <span class="timeline__date">2023 — Present</span>
-            <h3 class="timeline__role">Industrial PhD — Computer Science / Machine Learning</h3>
-            <p class="timeline__org">Milano Serravalle – Milano Tangenziali S.p.A. · Milan, Italy</p>
-            <p class="timeline__desc">Build data collection, preprocessing, and annotation workflows for sensor-based infrastructure monitoring, and develop the reporting frameworks used to track model and workflow performance.</p>
+            <span class="timeline__date">Oct 2023 — Present</span>
+            <h3 class="timeline__role">Industrial PhD Researcher, Machine Learning</h3>
+            <p class="timeline__org">Milano Serravalle – Milano Tangenziali S.p.A. × Università di Pavia · Milan, Italy</p>
+            <ul class="timeline__list">
+              <li>Build data collection, preprocessing and annotation workflows for sensor-based monitoring of highway bridges.</li>
+              <li>Designed event-based filtering and downsampling for 100&nbsp;Hz sensor streams to reduce long-term storage while preserving structural events (first-author paper, IEEE ETFA 2025).</li>
+              <li>Correlate bridge vibration with traffic counts and weigh-in-motion records (vehicle classes, axle loads) to relate structural response to real loading.</li>
+              <li>Develop reporting frameworks that track model and workflow performance, and translate results into recommendations for the operator's engineering team.</li>
+            </ul>
           </li>
           <li class="timeline__item">
-            <span class="timeline__date">Nov 2023 — Jan 2024</span>
-            <h3 class="timeline__role">Samsung Innovation Campus</h3>
-            <p class="timeline__org">Samsung Italia · Pavia, Italy</p>
-            <p class="timeline__desc">Advanced industry training in AI, IoT, and digital transformation.</p>
-          </li>
-          <li class="timeline__item">
-            <span class="timeline__date">2022 — 2023</span>
-            <h3 class="timeline__role">Robotics Programmer — Working Student</h3>
+            <span class="timeline__date">Oct 2022 — Sep 2023</span>
+            <h3 class="timeline__role">Robotics Programmer (Working Student)</h3>
             <p class="timeline__org">ReHouseit – Società Benefit · Milan, Italy</p>
-            <p class="timeline__desc">Designed automated workflows for collaborative robot operations and built CAM-translation and real-time simulation tools that improved operational efficiency by 30%.</p>
+            <ul class="timeline__list">
+              <li>Designed automated workflows for collaborative-robot (cobot) operations.</li>
+              <li>Built CAM-translation and real-time simulation tools that improved operational efficiency by 50%.</li>
+              <li>Set up and validated data collection for cobot performance monitoring.</li>
+            </ul>
           </li>
           <li class="timeline__item">
-            <span class="timeline__date">2020</span>
+            <span class="timeline__date">Jan 2020 — Jun 2020</span>
             <h3 class="timeline__role">Research Associate</h3>
             <p class="timeline__org">BML Munjal University · Gurgaon, India</p>
-            <p class="timeline__desc">Researched tool-coating optimization, improving tool-life performance by 25%, and contributed to a peer-reviewed journal publication.</p>
+            <ul class="timeline__list">
+              <li>Analysed machining and materials-testing data for coated carbide tool inserts; the optimised coating configuration improved tool life by 25%.</li>
+              <li>Co-authored a peer-reviewed journal publication on the results.</li>
+            </ul>
           </li>
         </ol>
       </div>
@@ -177,85 +329,127 @@
         <div class="skillgroup">
           <h3 class="skillgroup__title">Machine learning &amp; AI</h3>
           <ul class="chips">
-            <li>Deep learning</li><li>Artificial neural networks</li><li>Anomaly detection</li><li>Predictive modeling</li><li>Scikit-learn</li><li>TensorFlow</li><li>PyTorch</li>
+            <li>Deep learning</li><li>Anomaly detection</li><li>Probabilistic ML</li><li>Predictive modelling</li><li>PyTorch</li><li>TensorFlow</li><li>Scikit-learn</li>
           </ul>
         </div>
         <div class="skillgroup">
-          <h3 class="skillgroup__title">Data science &amp; analysis</h3>
+          <h3 class="skillgroup__title">Time series &amp; signal processing</h3>
           <ul class="chips">
-            <li>Time-series analysis</li><li>Sensor data analysis</li><li>Feature engineering</li><li>Statistical analysis</li><li>NumPy</li><li>Pandas</li><li>Matplotlib</li><li>Seaborn</li>
+            <li>Multivariate time series</li><li>FFT / Welch PSD</li><li>Spectrograms</li><li>Filtering &amp; downsampling</li><li>Feature engineering</li><li>Statistical analysis</li><li>SciPy</li>
           </ul>
         </div>
         <div class="skillgroup">
-          <h3 class="skillgroup__title">Data engineering &amp; operations</h3>
+          <h3 class="skillgroup__title">Data engineering</h3>
           <ul class="chips">
-            <li>Data pipeline design</li><li>ETL</li><li>Data quality assurance</li><li>Data annotation</li><li>KPI development</li>
+            <li>Data pipeline design</li><li>ETL</li><li>Pandas</li><li>Polars</li><li>NumPy</li><li>Parquet</li><li>Data quality assurance</li><li>Data annotation</li>
           </ul>
         </div>
         <div class="skillgroup">
-          <h3 class="skillgroup__title">Tools</h3>
+          <h3 class="skillgroup__title">Engineering practice &amp; visualisation</h3>
           <ul class="chips">
-            <li>Git</li><li>Docker</li><li>Linux</li><li>OpenCV</li><li>Tableau</li><li>Power BI</li><li>ANSYS</li><li>SolidWorks</li>
+            <li>Git</li><li>Docker</li><li>Linux</li><li>Matplotlib</li><li>Plotly</li><li>Seaborn</li><li>Tableau</li><li>Power BI</li><li>KPI development</li>
+          </ul>
+        </div>
+        <div class="skillgroup">
+          <h3 class="skillgroup__title">Domain &amp; engineering tools</h3>
+          <ul class="chips">
+            <li>Structural health monitoring</li><li>Industrial automation</li><li>Collaborative robots</li><li>OpenCV</li><li>ANSYS</li><li>SolidWorks</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- ===== PUBLICATIONS ===== -->
+    <!-- ===== PUBLICATIONS & EDUCATION ===== -->
     <section class="section section--alt" id="publications">
       <div class="section__inner">
-        <h2 class="section__heading">Selected publications</h2>
+        <h2 class="section__heading">Publications</h2>
+        <p class="pubs__profiles">
+          <a href="https://scholar.google.com/citations?user=yZH5A8kAAAAJ" target="_blank" rel="noopener">Google Scholar ↗</a>
+          <a href="https://orcid.org/0009-0009-2563-5831" target="_blank" rel="noopener">ORCID ↗</a>
+          <a href="https://iris.unipv.it/cris/rp/rp420621" target="_blank" rel="noopener">IRIS Pavia ↗</a>
+        </p>
         <ul class="pubs">
           <li class="pubs__item">
+            <p class="pubs__title"><a href="https://ieeexplore.ieee.org/document/11205642" target="_blank" rel="noopener">Efficient Storage by Filtering of Large Sensor Data for Infrastructure Monitoring</a></p>
+            <p class="pubs__authors"><strong>T. Routhu</strong>, A. Pavese, F. Graziotti, T. Facchinetti</p>
+            <p class="pubs__note"><em>IEEE 30th Int. Conf. on Emerging Technologies and Factory Automation (ETFA)</em>, 2025 · <span class="pubs__tag">First author</span></p>
+          </li>
+          <li class="pubs__item">
+            <p class="pubs__title"><a href="https://doi.org/10.1109/ETFA61755.2024.10710856" target="_blank" rel="noopener">Modular Digital Twin for Air Handling Units</a></p>
+            <p class="pubs__authors">T. Facchinetti, <strong>T. Routhu</strong></p>
+            <p class="pubs__note"><em>IEEE 29th Int. Conf. on Emerging Technologies and Factory Automation (ETFA)</em>, 2024 · DOI 10.1109/ETFA61755.2024.10710856</p>
+          </li>
+          <li class="pubs__item">
+            <p class="pubs__title"><a href="https://doi.org/10.1109/ETFA61755.2024.10711078" target="_blank" rel="noopener">Applying AI in the Area of Automation Systems: Overview and Challenges</a></p>
+            <p class="pubs__authors">T. Facchinetti, H. Li, A. Nocera, D. Peters, <strong>T. Routhu</strong>, S. Scanzio, L. Wisniewski</p>
+            <p class="pubs__note"><em>IEEE 29th Int. Conf. on Emerging Technologies and Factory Automation (ETFA)</em>, 2024 · DOI 10.1109/ETFA61755.2024.10711078</p>
+          </li>
+          <!-- TODO(Thomas): add venue/year/link, or status ("under review at …" / "in preparation"). -->
+          <li class="pubs__item">
             <p class="pubs__title">Probabilistic Framework for Multi-Vehicle Tracking Using Distributed Accelerometer Sensors</p>
-            <p class="pubs__note">AI/ML applications in automation systems.</p>
+            <p class="pubs__note">Vehicle tracking on bridges from distributed accelerometer networks.</p>
           </li>
+          <!-- TODO(Thomas): add authors, journal, year and DOI. -->
           <li class="pubs__item">
-            <p class="pubs__title">Applying AI in the Area of Automation Systems: Overview and Challenges</p>
-            <p class="pubs__note">AI/ML applications in automation systems.</p>
-          </li>
-          <li class="pubs__item">
-            <p class="pubs__title">Efficient Storage by Filtering of Large Sensor Data for Infrastructure Monitoring</p>
-            <p class="pubs__note">Data optimization for large-scale sensor datasets.</p>
-          </li>
-          <li class="pubs__item">
-            <p class="pubs__title">Modular Digital Twin for Air Handling Units</p>
-            <p class="pubs__note">Research on data-driven digital twin systems.</p>
-          </li>
-          <li class="pubs__item">
-            <p class="pubs__title">Machinability evaluation of coated carbide inserts in turning of super-duplex stainless steel</p>
-            <p class="pubs__note">Research on data-driven machinability evaluation of super-duplex stainless steel.</p>
+            <p class="pubs__title">Machinability Evaluation of Coated Carbide Inserts in Turning of Super-Duplex Stainless Steel</p>
+            <p class="pubs__note">Peer-reviewed journal article on data-driven machinability evaluation.</p>
           </li>
         </ul>
 
         <h2 class="section__heading section__heading--tight">Education</h2>
         <ul class="edu">
           <li>
-            <p class="edu__degree">PhD in Computer Science — Data Science &amp; Machine Learning Focus</p>
-            <p class="edu__meta">Università di Pavia · Pavia, Italy · 2023 – 2026</p>
+            <p class="edu__degree">PhD in Computer Science — Data Science &amp; Machine Learning</p>
+            <p class="edu__meta">Università di Pavia · Pavia, Italy · 2023 – present (in progress) · Industrial PhD with Milano Serravalle – Milano Tangenziali</p>
           </li>
           <li>
             <p class="edu__degree">Master's Degree in Robotics and Mechatronics — Industrial Automation</p>
             <p class="edu__meta">Università di Pavia · Pavia, Italy · 2020 – 2023</p>
-          </li>
-          <li>
-            <p class="edu__degree">Master of Science in Informatics</p>
-            <p class="edu__meta">Gdańsk University of Technology · Gdańsk, Poland · 2022</p>
+            <!-- TODO(Thomas): confirm wording: Erasmus+ exchange, double degree, or separate programme? -->
+            <p class="edu__sub">Including a study period in Informatics at Gdańsk University of Technology, Poland (2022)</p>
           </li>
           <li>
             <p class="edu__degree">Bachelor of Technology in Mechanical Engineering</p>
             <p class="edu__meta">BML Munjal University · Gurgaon, India · 2016 – 2020</p>
           </li>
         </ul>
+
+        <h2 class="section__heading section__heading--tight">Certifications &amp; training</h2>
+        <ul class="certs">
+          <li><span class="certs__name">Samsung Innovation Campus: AI &amp; IoT</span><span class="certs__meta">Samsung Italia · Nov 2023 – Jan 2024</span></li>
+          <li><span class="certs__name">Machine Learning Specialization</span><span class="certs__meta">Stanford Online &amp; DeepLearning.AI</span></li>
+          <li><span class="certs__name">Feature Engineering · Intermediate Machine Learning</span><span class="certs__meta">Kaggle Learn</span></li>
+          <li><span class="certs__name">OpenCV Bootcamp</span><span class="certs__meta">OpenCV</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+      <div class="section__inner">
+        <h2 class="section__heading">About</h2>
+        <div class="about">
+          <p>I am a PhD candidate in Computer Science at the Università di Pavia, doing industrial doctoral research with Milano Serravalle – Milano Tangenziali, and currently a visiting researcher at OWL University of Applied Sciences in Lemgo, Germany. My work applies machine learning to large-scale sensor networks on highway bridges. In practice that means building data pipelines, engineering features from multivariate signals, training and validating models, and making them run reliably outside a notebook.</p>
+          <p>I came to ML from mechanical engineering and robotics: I programmed collaborative robots at a Milan start-up and did materials-testing research in India. That background means I'm comfortable on the shop floor and with the physics behind the data, as well as in the code. It's useful anywhere ML meets physical assets: manufacturing, energy, mobility and infrastructure.</p>
+        </div>
+        <dl class="factsheet">
+          <div><dt>Based in</dt><dd>Pavia, Italy / Lemgo, Germany</dd></div>
+          <div><dt>Focus</dt><dd>Time-series ML, anomaly detection, sensor data</dd></div>
+          <div><dt>Currently</dt><dd>Industrial PhD (in progress) · Visiting researcher at OWL</dd></div>
+          <!-- TODO(Thomas): add CEFR level, e.g. "Italian (B2)". Add German if relevant. -->
+          <div><dt>Languages</dt><dd>English (professional) · Italian</dd></div>
+          <!-- TODO(Thomas): add your availability date, e.g. "Open to roles from March 2027". -->
+          <div><dt>Open to</dt><dd>Industrial ML / Data Science roles in Italy, Germany &amp; the EU</dd></div>
+        </dl>
       </div>
     </section>
 
     <!-- ===== CONTACT ===== -->
-    <section class="section" id="contact">
+    <section class="section section--alt" id="contact">
       <div class="section__inner">
         <h2 class="section__heading">Get in touch</h2>
-        <p class="contact__lede">Open to research collaborations, industrial ML/AI roles, and conversations about infrastructure monitoring.</p>
-        <div class="contact__grid">
+        <p class="contact__lede">Open to industrial ML / data science roles, research collaborations, and conversations about monitoring physical assets with data.</p>
+        <div class="contact__grid contact__grid--five">
           <a class="contact__card" href="mailto:thomas.routhu@gmail.com">
             <span class="contact__label">Email</span>
             <span class="contact__value">thomas.routhu@gmail.com</span>
@@ -266,7 +460,15 @@
           </a>
           <a class="contact__card" href="https://www.linkedin.com/in/thomas-routhu/" target="_blank" rel="noopener">
             <span class="contact__label">LinkedIn</span>
-            <span class="contact__value">linkedin.com/in/thomas-routhu</span>
+            <span class="contact__value">in/thomas-routhu</span>
+          </a>
+          <a class="contact__card" href="https://github.com/Thomas-Lohith" target="_blank" rel="noopener">
+            <span class="contact__label">GitHub</span>
+            <span class="contact__value">Thomas-Lohith</span>
+          </a>
+          <a class="contact__card" href="https://scholar.google.com/citations?user=yZH5A8kAAAAJ" target="_blank" rel="noopener">
+            <span class="contact__label">Google Scholar</span>
+            <span class="contact__value">Publications &amp; citations</span>
           </a>
         </div>
       </div>
@@ -278,7 +480,7 @@
     <p>&copy; <span id="year"></span> Thomas Routhu</p>
   </footer>
 
-  <!-- GoatCounter analytics — replace MYCODE with your actual site code -->
+  <!-- GoatCounter analytics -->
   <script data-goatcounter="https://thomasrouthu.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
 
